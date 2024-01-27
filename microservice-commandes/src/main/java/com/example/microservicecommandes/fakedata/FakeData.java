@@ -31,6 +31,7 @@ public class FakeData {
                 commande.setQuantite(ThreadLocalRandom.current().nextInt(1, 10));
                 commande.setDate(generateRandomDate());
                 commande.setMontant(ThreadLocalRandom.current().nextFloat() * 100);
+                commande.setIdProduit(i);
 
                 _context.getCommandesDAO().save(commande);
             }
